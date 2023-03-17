@@ -5,6 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="/css/main.css" />
+      <script src="./script.js" defer></script>
       <title>Manage Landing Page</title>
    </head>
    <body>
@@ -30,6 +31,30 @@
                class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline md:block hover:bg-brightRedLight"
                >Get Started</a
             >
+
+            <!-- Burger Icon  -->
+            <button
+               id="burger"
+               class="block burger md:hidden focus:outline-none"
+            >
+               <span class="lines burger-top"></span>
+               <span class="lines burger-middle"></span>
+               <span class="lines burger-bottom"></span>
+            </button>
+         </div>
+
+         <!-- Mobile Menu  -->
+         <div class="md:hidden">
+            <div
+               id="menu"
+               class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+            >
+               <a href="#">Pricing</a>
+               <a href="#">Product</a>
+               <a href="#">About Us</a>
+               <a href="#">Careers</a>
+               <a href="#">Community</a>
+            </div>
          </div>
       </nav>
 

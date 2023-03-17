@@ -891,6 +891,49 @@ body {
   }
 }
 
+.burger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.burger-middle {
+  transform: translateY(7px);
+}
+
+.burger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg) translateY(0px);
+}
+
+.open .burger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .burger-middle {
+  display: none;
+}
+
+.open .burger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
 .hover\:bg-brightRedLight:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(12 88% 69% / var(--tw-bg-opacity));
