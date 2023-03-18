@@ -1083,6 +1083,10 @@ body {
     gap: 5rem;
   }
 
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -1131,5 +1135,9 @@ body {
 
   .lg\:gap-0 {
     gap: 0px;
+  }
+
+  .lg\:gap-5 {
+    gap: 1.25rem;
   }
 }
