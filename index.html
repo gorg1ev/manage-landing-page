@@ -8,7 +8,11 @@
       <script src="./script.js" defer></script>
       <title>Manage Landing Page</title>
    </head>
-   <body>
+   <body class="relative">
+      <div
+         id="overlay"
+         class="overlay absolute top-0 left-0 right-0 bottom-0"
+      ></div>
       <!-- Navar -->
       <nav class="relative container mx-auto p-6">
          <!-- Flex Container  -->
@@ -47,7 +51,7 @@
          <div class="md:hidden">
             <div
                id="menu"
-               class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+               class="menu absolute flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
             >
                <a href="#">Pricing</a>
                <a href="#">Product</a>
@@ -303,7 +307,7 @@
       <footer class="bg-veryDarkBlue">
          <!-- Flex Container  -->
          <div
-            class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
+            class="container flex flex-wrap flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0 md:gap-20 lg:gap-0"
          >
             <!-- Logo and Social Link Container  -->
             <div
@@ -323,7 +327,7 @@
                      <img
                         src="images/icon-facebook.svg"
                         alt="Facebook Icon"
-                        class="h-8"
+                        class="h-8 transition-transform hover:-translate-y-1"
                      />
                   </a>
                   <!-- Link 2  -->
@@ -331,7 +335,7 @@
                      <img
                         src="images/icon-youtube.svg"
                         alt="YouTube Icon"
-                        class="h-8"
+                        class="h-8 transition-transform hover:-translate-y-1"
                      />
                   </a>
                   <!-- Link 3  -->
@@ -339,7 +343,7 @@
                      <img
                         src="images/icon-twitter.svg"
                         alt="Twitter Icon"
-                        class="h-8"
+                        class="h-8 transition-transform hover:-translate-y-1"
                      />
                   </a>
                   <!-- Link 4  -->
@@ -347,7 +351,7 @@
                      <img
                         src="images/icon-pinterest.svg"
                         alt="Pinterest Icon"
-                        class="h-8"
+                        class="h-8 transition-transform hover:-translate-y-1"
                      />
                   </a>
                   <!-- Link 5  -->
@@ -355,7 +359,7 @@
                      <img
                         src="images/icon-instagram.svg"
                         alt="Instagram Icon"
-                        class="h-8"
+                        class="h-8 transition-transform hover:-translate-y-1"
                      />
                   </a>
                </div>
@@ -376,7 +380,7 @@
             </div>
 
             <!-- Input Container  -->
-            <div class="flex flex-col justify-between">
+            <div class="flex flex-col justify-between mx-auto">
                <form class="flex space-x-3">
                   <input
                      type="text"
@@ -389,7 +393,7 @@
                      Go
                   </button>
                </form>
-               <div class="hidden text-white md:block">
+               <div class="hidden text-white md:block md:mt-5 lg:mt-0">
                   Copyright &copy; 2023. All Rights Reserved
                </div>
             </div>

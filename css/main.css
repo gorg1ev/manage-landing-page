@@ -549,12 +549,28 @@ video {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .left-6 {
   left: 1.5rem;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .right-6 {
   right: 1.5rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .mx-auto {
@@ -638,6 +654,10 @@ video {
 
 .flex-col-reverse {
   flex-direction: column-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -868,6 +888,12 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 body {
   background-image: url('../images/bg-tablet-pattern.svg');
   background-repeat: no-repeat;
@@ -934,6 +960,41 @@ body {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
+.menu {
+  opacity: 0;
+  transform: translateY(-100px);
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.menu.menu-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s;
+}
+
+.overlay {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.5) 20%
+   );
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hover\:-translate-y-1:hover {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-brightRedLight:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(12 88% 69% / var(--tw-bg-opacity));
@@ -972,6 +1033,10 @@ body {
 @media (min-width: 768px) {
   .md\:mb-4 {
     margin-bottom: 1rem;
+  }
+
+  .md\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .md\:block {
@@ -1014,6 +1079,10 @@ body {
     justify-content: flex-start;
   }
 
+  .md\:gap-20 {
+    gap: 5rem;
+  }
+
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -1052,5 +1121,15 @@ body {
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 976px) {
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:gap-0 {
+    gap: 0px;
   }
 }
